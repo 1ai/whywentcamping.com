@@ -11,27 +11,24 @@
 	font-style: normal;
 }
 
-/* Comic Zine is a freeware typeface by Blue Vinyl Fonts, grabbed from fontsquirrel.com */
+/* Modded version of Comic Zine OT, modded by Jenna 'Bluebie' Fox, to just be the fills. */
 @font-face {
-	font-family: 'ComicZineOTRegular';
-	src: url('typefaces/comic_zine_ot-webfont.eot');
-	src: local('☺'), url('typefaces/comic_zine_ot-webfont.woff') format('woff'),
-	     url('typefaces/comic_zine_ot-webfont.ttf') format('truetype'),
-	     url('typefaces/comic_zine_ot-webfont.svg#webfontG86RhAdl') format('svg');
+	font-family: 'ComicZineOTColorFill';
+	src: url('typefaces/comiczineotcolorfill-webfont.eot');
+	src: local('☺'), url('typefaces/comiczineotcolorfill-webfont.woff') format('woff'), url('typefaces/comiczineotcolorfill-webfont.ttf') format('truetype'), url('typefaces/comiczineotcolorfill-webfont.svg#webfontQHIYlA0Y') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
-/* Modded version of Comic Zine OT, modded by Jenna 'Bluebie' Fox, to just be the fills. */
+/* Comic Zine is a freeware typeface by Blue Vinyl Fonts, grabbed from fontsquirrel.com */
 @font-face {
-	font-family: 'ComicZineOTColorFill';
-	src: url('comiczineotcolorfill-webfont.eot');
-	src: local('☺'), url('typefaces/comiczineotcolorfill-webfont.woff') format('woff'),
-	     url('typefaces/comiczineotcolorfill-webfont.ttf') format('truetype'),
-	     url('typefaces/comiczineotcolorfill-webfont.svg#webfonth7tyJalr') format('svg');
+	font-family: 'ComicZineOTRegular';
+	src: url('typefaces/comiczineot-webfont.eot');
+	src: local('☺'), url('typefaces/comiczineot-webfont.woff') format('woff'), url('typefaces/comiczineot-webfont.ttf') format('truetype'), url('typefaces/comiczineot-webfont.svg#webfontElw7akxc') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
+
 
 
 * {
@@ -40,7 +37,6 @@
 }
 
 html {
-/*  background-color: #694;*/
   color: #222;
   font-family: Utopia, Georgia, Times, serif;
   line-height: 1.6;
@@ -67,17 +63,21 @@ header h1 {
   padding-top: 30px;
   margin-bottom: -28px;
   font-weight: normal;
+  letter-spacing: normal;
   font-size: 40pt;
+	font-style: normal;
+	text-transform: uppercase;
 }
 
 header h1.fill {
-  font-family: ComicZineOTColorFill; color: #ffcc66;
+  font-family: 'ComicZineOTColorFill', sans-serif; color: #ffcc66;
   background-image: url("img/grass.png"), url("img/tipi.png"), url("img/army.png");
   background-repeat: repeat-x, no-repeat, no-repeat;
   background-position: center 75px, left 13px, right 27px;
 }
 
-header h1.outline { font-family: ComicZineOTRegular; color: black; position: absolute; width: 100%; top: 0; }
+header h1.outline { font-family: ComicZineOTRegular, sans-serif; color: black; position: absolute; width: 100%; top: 0; }
+@media speech, aural { header h1.fill { display: none; } }
 
 #wrapper {
   margin: 120px auto 80px auto;
@@ -87,6 +87,7 @@ header h1.outline { font-family: ComicZineOTRegular; color: black; position: abs
 /* Modded paper texture provided by BittBox:
    http://www.flickr.com/photos/bittbox/2691163311/sizes/o/in/photostream/ - CC-BY */
 #wrapper #subwrap {
+  /* I wish there were some obvious way to set a background fallback color when using border-image... */
 /*  background-color: rgb(251,250,243);*/
   -webkit-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
   -moz-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
@@ -135,10 +136,6 @@ header h1.outline { font-family: ComicZineOTRegular; color: black; position: abs
 #nav .extra a {
   background-color: #295d28;
 }
-
-/*#nav a:hover {
-  text-decoration: underline;
-}*/
 
 #nav a span {
   float: left;
