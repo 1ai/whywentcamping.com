@@ -8,7 +8,7 @@ filter:
 
 p(notice). *Latest news:* "<%= latest_news %>":/news
 
-!<{width:80px}/img/badge.gif!
+<img src="/img/badge.gif" width="80" style="float: left; margin-right: 1ex;">
 
 Camping is a web framework which consistently stays at less than 4kB of code.
 You can probably view the complete source code on a single page. But, you know,
@@ -20,31 +20,31 @@ like Rails does. You can then easily move it to Rails once you’ve got it going
 
 h2. Short Example
 
-<% ruby do %>
-Camping.goes :Blog
+ruby do
+  Camping.goes :Blog
 
-module Blog::Models
-  class Post < Base; end
-end
+  module Blog::Models
+    class Post < Base; end
+  end
 
-module Blog::Controllers
-  class Index
-    def get
-      @posts = Post.all
-      render :index
+  module Blog::Controllers
+    class Index
+      def get
+        @posts = Post.all
+        render :index
+      end
+    end
+  end
+
+  module Blog::Views
+    def index
+      @posts.each do |post|
+        h1 post.title
+        div.content! { post.body }
+      end
     end
   end
 end
-
-module Blog::Views
-  def index
-    @posts.each do |post|
-      h1 post.title
-      div.content! { post.body }
-    end
-  end
-end
-<% end %>
 
 
 h2(#getting-started). Getting Started

@@ -57,27 +57,42 @@ header {
   width: 100%;
   height: 95px;
   min-width: 660px;
+  text-align: center;
 }
 
-header h1 {
-  padding-top: 30px;
-  margin-bottom: -28px;
-  font-weight: normal;
-  letter-spacing: normal;
-  font-size: 40pt;
-	font-style: normal;
-	text-transform: uppercase;
-}
-
+header h1 { padding-top: 30px; margin-bottom: -28px; }
 header h1.fill {
-  font-family: 'ComicZineOTColorFill', sans-serif; color: #ffcc66;
   background-image: url("img/grass.png"), url("img/tipi.png"), url("img/army.png");
   background-repeat: repeat-x, no-repeat, no-repeat;
   background-position: center 75px, left 13px, right 27px;
 }
 
-header h1.outline { font-family: ComicZineOTRegular, sans-serif; color: black; position: absolute; width: 100%; top: 0; }
-@media speech, aural { header h1.fill { display: none; } }
+body h1, body h2, body h3, body h4, body h5 { text-transform: uppercase; font-weight: normal; width: 100%; }
+h1.outline, h2.outline, h3.outline, h4.outline, h5.outline {
+  font-family: 'ComicZineOTRegular', sans-serif;
+  position: relative;
+  z-index: 501;
+  color: black;
+}
+
+h1.fill, h2.fill, h3.fill, h4.fill, h5.fill {
+  font-family: 'ComicZineOTColorFill', sans-serif;
+  position: absolute;
+  z-index: 500;
+}
+
+/* sizes! */
+body h1 { font-size: 40pt; }
+body h2 { font-size: 35pt; }
+body h3 { font-size: 25pt; }
+
+/* colours! */
+body h1.fill { color: #ffcc66; }
+body h2.fill { color: #c6a2ff; }
+body h3.fill { color: #6fb7ff; }
+
+
+@media speech, aural { .fill { display: none; } }
 
 #wrapper {
   margin: 120px auto 80px auto;
@@ -95,6 +110,7 @@ header h1.outline { font-family: ComicZineOTRegular, sans-serif; color: black; p
   border-width: 75px 30px 50px 30px;
   position: relative;
   width: 600px;
+  min-height: 250px;
   z-index: 100;
 }
 
