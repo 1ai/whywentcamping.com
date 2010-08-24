@@ -1,0 +1,4 @@
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-woff .woff
+ExpiresActive on
+ExpiresDefault A3600

@@ -8,19 +8,14 @@ This is a redesign of the Camping website. Design decisions:
 * The news archive is for all kind of Camping related stuff.
 * The reference is very simple, hand-written and with comments (no RDoc).
 * **Current version**: <http://whywentcamping.judofyr.net/>
+* All backed by the camping wiki on GitHub, editable by the community.
 
 Not everything is implemented yet; see the issue tracker.
 
 Usage
 -----
 
-You'll need to install the latest Webby and syntax, and then run:
-
-    webby autobuild
-
-If you want to add a new post:
-
-    webby create:post 'news/Title of the Post'
+You'll need to install camping, RedCloth, and syntax gems, and have the git binaries installed and available. Then just host the wiki.rb in the same way you would any camping app, and ensure it has privileges needed to create the camping.wiki directory and update it through git as needed.
 
 Licensing
 ---------

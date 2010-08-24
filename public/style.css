@@ -3,10 +3,10 @@
    do not permit you to install this typeface globally on your computer without your own license. */
 @font-face {
 	font-family: 'TopstitchRegular';
-	src: url('typefaces/topstitch-webfont.eot');
-	src: local('☺'), url('typefaces/topstitch-webfont.woff') format('woff'),
-	     url('typefaces/topstitch-webfont.ttf') format('truetype'),
-	     url('typefaces/topstitch-webfont.svg#webfont2bM2Nqpx') format('svg');
+	src: url('topstitch-webfont.eot');
+	src: local('☺'), url('topstitch-webfont.woff') format('woff'),
+	     url('topstitch-webfont.ttf') format('truetype'),
+	     url('topstitch-webfont.svg#webfont2bM2Nqpx') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -14,8 +14,8 @@
 /* Modded version of Comic Zine OT, modded by Jenna 'Bluebie' Fox, to just be the fills. */
 @font-face {
 	font-family: 'ComicZineOTColorFill';
-	src: url('typefaces/comiczineotcolorfill-webfont.eot');
-	src: local('☺'), url('typefaces/comiczineotcolorfill-webfont.woff') format('woff'), url('typefaces/comiczineotcolorfill-webfont.ttf') format('truetype'), url('typefaces/comiczineotcolorfill-webfont.svg#webfontQHIYlA0Y') format('svg');
+	src: url('comiczineotcolorfill-webfont.eot');
+	src: local('☺'), url('comiczineotcolorfill-webfont.woff') format('woff'), url('comiczineotcolorfill-webfont.ttf') format('truetype'), url('comiczineotcolorfill-webfont.svg#webfontQHIYlA0Y') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,8 +23,8 @@
 /* Comic Zine is a freeware typeface by Blue Vinyl Fonts, grabbed from fontsquirrel.com */
 @font-face {
 	font-family: 'ComicZineOTRegular';
-	src: url('typefaces/comiczineot-webfont.eot');
-	src: local('☺'), url('typefaces/comiczineot-webfont.woff') format('woff'), url('typefaces/comiczineot-webfont.ttf') format('truetype'), url('typefaces/comiczineot-webfont.svg#webfontElw7akxc') format('svg');
+	src: url('comiczineot-webfont.eot');
+	src: local('☺'), url('comiczineot-webfont.woff') format('woff'), url('comiczineot-webfont.ttf') format('truetype'), url('comiczineot-webfont.svg#webfontElw7akxc') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -44,7 +44,7 @@ html {
 
 body {
   background-color: #38261f;
-  background-image: url("img/soil.gif");
+  background-image: url("soil.gif");
   background-size: 180px 180px;
   background-position: center top;
 }
@@ -62,7 +62,7 @@ header {
 
 header h1 { padding-top: 30px; margin-bottom: -28px; }
 header h1.fill {
-  background-image: url("img/grass.png"), url("img/tipi.png"), url("img/army.png");
+  background-image: url("grass.png"), url("tipi.png"), url("army.png");
   background-repeat: repeat-x, no-repeat, no-repeat;
   background-position: center 75px, left 13px, right 27px;
 }
@@ -79,17 +79,22 @@ h1.fill, h2.fill, h3.fill, h4.fill, h5.fill {
   font-family: 'ComicZineOTColorFill', sans-serif;
   position: absolute;
   z-index: 500;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 /* sizes! */
 body h1 { font-size: 40pt; }
 body h2 { font-size: 35pt; }
 body h3 { font-size: 25pt; }
+body h4 { font-size: 20pt; }
 
 /* colours! */
 body h1.fill { color: #ffcc66; }
 body h2.fill { color: #c6a2ff; }
 body h3.fill { color: #6fb7ff; }
+body h4.fill { color: #ffcc66; }
 
 
 @media speech, aural { .fill { display: none; } }
@@ -104,9 +109,9 @@ body h3.fill { color: #6fb7ff; }
 #wrapper #subwrap {
   /* I wish there were some obvious way to set a background fallback color when using border-image... */
 /*  background-color: rgb(251,250,243);*/
-  -webkit-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
-  -moz-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
-  border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
+  -webkit-border-image: url("paper.png") 75 30 50 30 stretch stretch;
+  -moz-border-image: url("paper.png") 75 30 50 30 stretch stretch;
+  border-image: url("paper.png") 75 30 50 30 stretch stretch;
   border-width: 75px 30px 50px 30px;
   position: relative;
   width: 600px;
@@ -124,7 +129,7 @@ body h3.fill { color: #6fb7ff; }
 #nav {
   list-style-type: none;
   text-align: left;
-  position: fixed !important;
+/*  position: fixed !important;*/
   position: absolute;
   top: 12em;
   z-index: 50;
@@ -132,7 +137,7 @@ body h3.fill { color: #6fb7ff; }
 
 #nav a {
   color: #1336a8;
-  background-image: url("img/ribbon.png");
+  background-image: url("ribbon.png");
   display: block;
   font-weight: normal;
   padding: 0 0.5em 0 1.5em;
@@ -190,7 +195,7 @@ h2 {
   font-family: TopstitchRegular;
   color: #8ba066;
   font-size: 30px;
-  -webkit-border-image: url("img/purple-stitched-button.png") 27 166 34 36 round stretch;
+  -webkit-border-image: url("purple-stitched-button.png") 27 166 34 36 round stretch;
   border-width: 27px 166px 34px 36px;
   padding: -20px -130px 0 0;
   height: 33px;
@@ -198,13 +203,8 @@ h2 {
   text-shadow: 0.5px 2px 3px rgba(0,0,0, 1), -0.5px -1px 1px rgba(255,255,255, 0.5);*/
 }
 
-h2.post-heading {
-  border: 0;
-  font-weight: normal;
-}
-
 h2 a {
-  color: #222;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -216,7 +216,7 @@ h1, h2, h3 {
   margin-bottom: 0.5em;
 }
 
-p, pre {
+p, pre, ol, ul, dl {
   margin-bottom: 1em;
 }
 
@@ -278,6 +278,19 @@ blockquote {
   border-left-width: 4px;
   margin: 1em 0px 1em 1ex;
   padding-left: 1.5ex;
+}
+
+blockquote pre {
+  overflow-x: auto;
+}
+
+#subwrap ol, #subwrap ul, #subwrap dl {
+  padding-left: 2em;
+}
+
+#subwrap a.edit {
+  position: absolute;
+  right: 0;
 }
 
 /* Make it less wide for smaller width devices like iThings and DoomDroids */
