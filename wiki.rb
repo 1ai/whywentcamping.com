@@ -152,7 +152,7 @@ module Wiki::Views
           text @title
         end
         link :rel => 'icon', :href => URL('/badge.gif')
-        meta :name => 'viewport', :content => 'width=660'
+        meta :name => 'viewport', :content => 'width=695'
       end
     
       body do
@@ -167,8 +167,8 @@ module Wiki::Views
           end
           
           div.subwrap! do
-            a.edit(:href => @edit) { button "Edit" } if @edit
             self << yield
+            a.edit(:href => @edit, :title => "Edit #{@title}") { button "Edit" } if @edit
           end
         end
       end

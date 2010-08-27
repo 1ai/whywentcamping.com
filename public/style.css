@@ -56,7 +56,7 @@ header {
   top: 0;
   width: 100%;
   height: 95px;
-  min-width: 660px;
+  min-width: 695px;
   text-align: center;
 }
 
@@ -290,11 +290,17 @@ blockquote pre {
 
 #subwrap a.edit {
   position: absolute;
-  right: 0;
+  right: -3em;
+  margin-top: -1em;
+  background-image: url('pencil.png');
+  width: 118px;
+  height: 63px;
 }
 
+#subwrap a.edit button { display: none; }
+
 /* Make it less wide for smaller width devices like iThings and DoomDroids */
-@media (max-width:940px), (max-height:530px) {
+@media (max-width:940px) {
   body #nav.aside {
     margin: 1ex auto 1em auto;
     text-align: center;
