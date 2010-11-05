@@ -90,14 +90,15 @@ module Wiki::Helpers
   end
   
   def transcode file
-    text = presyntaxify(File.read(file)) rescue ''
-    fancify case File.extname(file)
+    extension = File.extname(file)
+    text = presyntaxify(File.read(file), extension) rescue ''
+    fancify case extension
     when '.textile'
       RedCloth.new(text).to_html
     when '.md'
       RDiscount.new(text).to_html
     else
-      if File.exists?(file)
+      if File.exists?(file) 
         "<p>Error: Do not know how to parse #{format} files. Here it is raw:</p><blockquote><pre>#{text}</pre></blockquote>"
       else
         Wiki::Views.send(:article_not_found, File.basename(file))
