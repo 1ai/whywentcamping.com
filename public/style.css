@@ -108,9 +108,9 @@ body h4.fill { color: #ffcc66; }
    http://www.flickr.com/photos/bittbox/2691163311/sizes/o/in/photostream/ - CC-BY */
 #wrapper #subwrap {
   /* I wish there were some obvious way to set a background fallback color when using border-image... */
-/*  background-color: rgb(251,250,243);*/
   -webkit-border-image: url("paper.png") 75 30 50 30 stretch stretch;
   -moz-border-image: url("paper.png") 75 30 50 30 stretch stretch;
+  -o-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
   border-image: url("paper.png") 75 30 50 30 stretch stretch;
   border-width: 75px 30px 50px 30px;
   position: relative;
